@@ -1,0 +1,1149 @@
+/* =================================================
+   RESET
+================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+
+    background: #f8fafc;
+    color: #0f172a;
+
+    transition:
+        background 0.3s,
+        color 0.3s;
+}
+
+
+/* =================================================
+   NAVBAR
+================================================= */
+
+.navbar {
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 15px 8%;
+
+    background: white;
+
+    border-bottom: 1px solid #e2e8f0;
+
+    transition:
+        background 0.3s,
+        border 0.3s;
+}
+
+.logo {
+
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    font-size: 20px;
+    font-weight: 800;
+
+    color: #2563eb;
+}
+
+.logo i {
+    font-size: 22px;
+}
+
+.nav-menu {
+
+    display: flex;
+    align-items: center;
+
+    gap: 22px;
+}
+
+.nav-menu a {
+
+    text-decoration: none;
+
+    color: #475569;
+
+    font-size: 14px;
+
+    transition: 0.2s;
+}
+
+.nav-menu a:hover {
+    color: #2563eb;
+}
+
+
+/* =================================================
+   DARK MODE BUTTON
+================================================= */
+
+.theme-toggle {
+
+    width: 35px;
+    height: 35px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 50%;
+
+    background: transparent;
+
+    color: #475569;
+
+    cursor: pointer;
+
+    font-size: 16px;
+
+    transition: 0.2s;
+}
+
+.theme-toggle:hover {
+
+    background: #eff6ff;
+
+    color: #2563eb;
+}
+
+
+/* =================================================
+   HERO
+================================================= */
+
+.hero {
+
+    min-height: 450px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 70px 8%;
+
+    background: #eff6ff;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.hero-label {
+
+    color: #2563eb;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+
+    margin: 10px 0;
+
+    font-size: 48px;
+
+    line-height: 1.1;
+}
+
+.hero-description {
+
+    max-width: 540px;
+
+    color: #64748b;
+
+    line-height: 1.6;
+}
+
+.hero-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 20px;
+
+    padding: 12px 20px;
+
+    background: #2563eb;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    transition: 0.2s;
+}
+
+.hero-button:hover {
+    background: #1d4ed8;
+}
+
+
+/* =================================================
+   GENERAL SECTION
+================================================= */
+
+.weather-section,
+.recommendation-section,
+.schedule-section {
+
+    padding: 70px 8%;
+}
+
+.section-title {
+
+    text-align: center;
+
+    margin-bottom: 35px;
+}
+
+.section-title span {
+
+    color: #2563eb;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+.section-title h2 {
+
+    margin: 7px 0;
+
+    font-size: 30px;
+}
+
+.section-title p {
+
+    color: #64748b;
+
+    line-height: 1.5;
+}
+
+
+/* =================================================
+   CURRENT WEATHER
+================================================= */
+
+.current-weather {
+
+    max-width: 400px;
+
+    margin: auto;
+
+    padding: 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    background: white;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 20px rgba(15, 23, 42, 0.04);
+}
+
+.current-weather i {
+
+    font-size: 50px;
+
+    color: #2563eb;
+}
+
+.current-weather small {
+
+    color: #64748b;
+
+    font-size: 10px;
+}
+
+.current-weather h2 {
+
+    margin: 3px 0;
+
+    font-size: 35px;
+}
+
+.current-weather p {
+    color: #64748b;
+}
+
+
+/* =================================================
+   WEATHER LIST
+================================================= */
+
+.weather-title {
+
+    margin-top: 45px;
+
+    margin-bottom: 15px;
+}
+
+.weather-title h3 {
+    font-size: 20px;
+}
+
+.weather-title p {
+
+    margin-top: 5px;
+
+    color: #64748b;
+
+    font-size: 13px;
+}
+
+.weather-list {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(6, 1fr);
+
+    gap: 10px;
+}
+
+.forecast-card {
+
+    padding: 15px 8px;
+
+    text-align: center;
+
+    background: white;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.forecast-card:hover {
+
+    border-color: #2563eb;
+
+    transform: translateY(-3px);
+}
+
+.forecast-card.selected {
+
+    border: 2px solid #2563eb;
+
+    background: #eff6ff;
+}
+
+.forecast-day {
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+.forecast-date {
+
+    margin-top: 4px;
+
+    color: #64748b;
+
+    font-size: 11px;
+}
+
+.forecast-icon {
+
+    display: block;
+
+    margin: 12px 0;
+
+    font-size: 28px;
+
+    color: #2563eb;
+}
+
+.forecast-condition {
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+.forecast-temperature {
+
+    margin-top: 6px;
+
+    color: #64748b;
+
+    font-size: 11px;
+}
+
+
+/* =================================================
+   RECOMMENDATION
+================================================= */
+
+.recommendation-section {
+
+    background: #f1f5f9;
+}
+
+.recommendation-card {
+
+    max-width: 900px;
+
+    margin: auto;
+
+    padding: 20px;
+
+    background: white;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 15px;
+}
+
+.recommendation-item {
+
+    padding: 18px 0;
+
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.recommendation-item:last-child {
+    border-bottom: none;
+}
+
+.recommendation-heading {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 10px;
+}
+
+.recommendation-heading i {
+
+    color: #2563eb;
+
+    font-size: 18px;
+}
+
+.recommendation-heading h3 {
+    font-size: 16px;
+}
+
+.recommendation-content {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 8px;
+}
+
+.recommendation-small {
+
+    padding: 12px;
+
+    background: #f8fafc;
+
+    border-radius: 10px;
+}
+
+.recommendation-icon {
+
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #2563eb;
+
+    font-size: 18px;
+}
+
+.recommendation-small h4 {
+
+    font-size: 14px;
+
+    margin-bottom: 5px;
+}
+
+.recommendation-small p {
+
+    color: #64748b;
+
+    font-size: 11px;
+
+    line-height: 1.4;
+}
+
+
+/* =================================================
+   JADWAL
+================================================= */
+
+.schedule-section {
+    background: white;
+}
+
+.day-buttons {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    margin-bottom: 25px;
+
+    flex-wrap: wrap;
+}
+
+.day-button {
+
+    padding: 10px 18px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 8px;
+
+    background: white;
+
+    color: #475569;
+
+    cursor: pointer;
+
+    font-size: 13px;
+
+    transition: 0.2s;
+}
+
+.day-button:hover {
+
+    border-color: #2563eb;
+
+    color: #2563eb;
+}
+
+.day-button.active {
+
+    background: #2563eb;
+
+    border-color: #2563eb;
+
+    color: white;
+}
+
+.schedule-container {
+
+    max-width: 1000px;
+
+    margin: auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.schedule-item {
+
+    display: grid;
+
+    grid-template-columns:
+        120px
+        1fr
+        220px;
+
+    gap: 15px;
+
+    align-items: center;
+
+    padding: 15px;
+
+    background: #f8fafc;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 10px;
+
+    transition: 0.2s;
+}
+
+.schedule-item:hover {
+
+    border-color: #2563eb;
+
+    transform: translateX(3px);
+}
+
+.schedule-time {
+
+    color: #2563eb;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+.schedule-subject {
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+.schedule-teacher {
+
+    margin-top: 4px;
+
+    color: #64748b;
+
+    font-size: 12px;
+}
+
+.schedule-room {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    gap: 6px;
+
+    color: #475569;
+
+    font-size: 12px;
+}
+
+.schedule-room i {
+    color: #2563eb;
+}
+
+.schedule-break {
+
+    background: #eff6ff;
+
+    border-color: #dbeafe;
+}
+
+.schedule-break .schedule-subject {
+    color: #2563eb;
+}
+
+
+/* =================================================
+   FOOTER
+================================================= */
+
+footer {
+
+    padding: 25px;
+
+    text-align: center;
+
+    background: white;
+
+    border-top: 1px solid #e2e8f0;
+}
+
+footer p {
+
+    color: #64748b;
+
+    font-size: 13px;
+
+    margin: 3px;
+}
+
+
+/* =================================================
+   DARK MODE
+================================================= */
+
+body.dark {
+
+    background: #0f172a;
+
+    color: #e2e8f0;
+}
+
+body.dark .navbar {
+
+    background: #111827;
+
+    border-color: #1e293b;
+}
+
+body.dark .nav-menu a {
+    color: #cbd5e1;
+}
+
+body.dark .nav-menu a:hover {
+    color: #60a5fa;
+}
+
+body.dark .theme-toggle {
+
+    border-color: #334155;
+
+    color: #f8fafc;
+}
+
+body.dark .theme-toggle:hover {
+    background: #1e293b;
+}
+
+body.dark .hero {
+    background: #111827;
+}
+
+body.dark .hero-description {
+    color: #94a3b8;
+}
+
+body.dark .section-title p {
+    color: #94a3b8;
+}
+
+body.dark .current-weather {
+
+    background: #111827;
+
+    border-color: #334155;
+}
+
+body.dark .current-weather p,
+body.dark .current-weather small {
+    color: #94a3b8;
+}
+
+body.dark .weather-title p {
+    color: #94a3b8;
+}
+
+body.dark .forecast-card {
+
+    background: #111827;
+
+    border-color: #334155;
+}
+
+body.dark .forecast-card.selected {
+    background: #172554;
+}
+
+body.dark .forecast-date,
+body.dark .forecast-temperature {
+    color: #94a3b8;
+}
+
+body.dark .recommendation-section {
+    background: #0f172a;
+}
+
+body.dark .recommendation-card {
+
+    background: #111827;
+
+    border-color: #334155;
+}
+
+body.dark .recommendation-item {
+    border-color: #334155;
+}
+
+body.dark .recommendation-small {
+    background: #1e293b;
+}
+
+body.dark .recommendation-small p {
+    color: #94a3b8;
+}
+
+body.dark .schedule-section {
+    background: #0f172a;
+}
+
+body.dark .day-button {
+
+    background: #111827;
+
+    border-color: #334155;
+
+    color: #cbd5e1;
+}
+
+body.dark .day-button.active {
+
+    background: #2563eb;
+
+    color: white;
+}
+
+body.dark .schedule-item {
+
+    background: #111827;
+
+    border-color: #334155;
+}
+
+body.dark .schedule-teacher,
+body.dark .schedule-room {
+    color: #94a3b8;
+}
+
+body.dark .schedule-break {
+
+    background: #172554;
+
+    border-color: #1e3a8a;
+}
+
+body.dark footer {
+
+    background: #111827;
+
+    border-color: #1e293b;
+}
+
+body.dark footer p {
+    color: #94a3b8;
+}
+
+
+/* =================================================
+   MOBILE
+================================================= */
+
+@media (max-width: 700px) {
+
+    .navbar {
+
+        padding: 12px 5%;
+
+        align-items: flex-start;
+    }
+
+    .logo {
+        font-size: 17px;
+    }
+
+    .nav-menu {
+
+        gap: 8px;
+
+        flex-wrap: wrap;
+
+        justify-content: flex-end;
+    }
+
+    .nav-menu a {
+
+        font-size: 10px;
+    }
+
+    .theme-toggle {
+
+        width: 30px;
+
+        height: 30px;
+
+        font-size: 14px;
+    }
+
+
+    .hero {
+
+        min-height: 400px;
+
+        padding: 50px 5%;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+
+    .weather-section,
+    .recommendation-section,
+    .schedule-section {
+
+        padding: 50px 5%;
+    }
+
+    .section-title h2 {
+        font-size: 26px;
+    }
+
+
+    .weather-list {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .current-weather {
+
+        padding: 20px;
+    }
+
+    .current-weather i {
+        font-size: 40px;
+    }
+
+    .current-weather h2 {
+        font-size: 28px;
+    }
+
+
+    .recommendation-card {
+        padding: 15px;
+    }
+
+    .recommendation-content {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .schedule-item {
+
+        grid-template-columns: 1fr;
+
+        gap: 7px;
+    }
+
+    .schedule-room {
+
+        justify-content: flex-start;
+    }
+
+}
+
+
+@media (max-width: 400px) {
+
+    .nav-menu a:nth-child(1),
+    .nav-menu a:nth-child(2) {
+
+        display: none;
+    }
+
+    .weather-list {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .forecast-card {
+        padding: 12px 5px;
+    }
+
+    .forecast-icon {
+        font-size: 24px;
+    }
+}
+/* =====================================
+   ANIMASI DASAR
+===================================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes weatherFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-6px);
+    }
+}
+
+@keyframes softPulse {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(37, 99, 235, 0);
+    }
+
+    50% {
+        box-shadow: 0 0 0 5px rgba(37, 99, 235, 0.08);
+    }
+}
+
+/* Hero muncul saat halaman dibuka */
+
+.hero-content {
+    animation: fadeUp 0.8s ease both;
+}
+
+/* Ikon cuaca bergerak lembut */
+
+.current-weather > i {
+    animation: weatherFloat 3s ease-in-out infinite;
+}
+
+/* Kartu cuaca */
+
+.forecast-card {
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.forecast-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 22px rgba(37, 99, 235, 0.10);
+}
+
+.forecast-card.selected {
+    animation: softPulse 1.5s ease-in-out;
+}
+
+/* Kartu rekomendasi */
+
+.recommendation-small {
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.recommendation-small:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(15, 23, 42, 0.07);
+}
+
+.recommendation-icon {
+    transition: transform 0.25s ease;
+}
+
+.recommendation-small:hover .recommendation-icon {
+    transform: scale(1.15) rotate(-5deg);
+}
+
+/* Jadwal */
+
+.schedule-item {
+    animation: fadeUp 0.35s ease both;
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease;
+}
+
+/* Tombol hari */
+
+.day-button {
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.day-button:active,
+.theme-toggle:active,
+.hero-button:active {
+    transform: scale(0.95);
+}
+
+/* Tombol tema */
+
+.theme-toggle i {
+    transition: transform 0.3s ease;
+}
+
+.theme-toggle:hover i {
+    transform: rotate(20deg);
+}
+
+/* Navbar sedikit transparan ketika di-scroll */
+
+.navbar {
+    transition:
+        background 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+/* Hormati pengaturan pengurangan animasi perangkat */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}

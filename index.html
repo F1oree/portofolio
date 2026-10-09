@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Personal Schedule</title>
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            <i class="bi bi-cloud-sun"></i>
+            Personal Schedule
+        </div>
+
+        <div class="nav-menu">
+
+            <a href="#home">
+                Beranda
+            </a>
+
+            <a href="#cuaca">
+                Cuaca
+            </a>
+
+            <a href="#rekomendasi">
+                Rekomendasi
+            </a>
+
+            <a href="#jadwal">
+                Jadwal
+            </a>
+
+            <!-- Dark Mode -->
+            <button
+                id="themeToggle"
+                class="theme-toggle"
+                title="Ganti tema"
+            >
+                <i class="bi bi-moon"></i>
+            </button>
+
+        </div>
+
+    </nav>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <p class="hero-label">
+                Personal Schedule
+            </p>
+
+            <h1>
+                Halo, Flo
+                <br>
+                Lihat jadwal dan cuaca hari ini 
+            </h1>
+
+            <p class="hero-description">
+                Pantau cuaca dan lihat rekomendasi
+                aktivitas, makanan, novel, dan lagu
+            </p>
+
+            <a href="#cuaca" class="hero-button">
+                Lihat Cuaca
+                <i class="bi bi-arrow-down"></i>
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CUACA ================= -->
+
+    <section id="cuaca" class="weather-section">
+
+        <div class="section-title">
+
+            <span>WEATHER</span>
+
+            <h2>
+                Cuaca Sekolah
+            </h2>
+
+        </div>
+
+
+        <!-- Cuaca Saat Ini -->
+
+        <div class="current-weather">
+
+            <i
+                id="currentWeatherIcon"
+                class="bi bi-cloud-sun"
+            ></i>
+
+            <div>
+
+                <small>
+                    HARI INI
+                </small>
+
+                <h2 id="currentTemperature">
+                    --°C
+                </h2>
+
+                <p id="currentCondition">
+                    Memuat cuaca...
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Forecast -->
+
+        <div class="weather-title">
+
+            <h3>
+                Perkiraan Cuaca
+            </h3>
+
+            <p>
+                Pilih salah satu tanggal untuk melihat rekomendasi.
+            </p>
+
+        </div>
+
+
+        <div
+            id="weatherContainer"
+            class="weather-list"
+        ></div>
+
+    </section>
+
+
+    <!-- ================= REKOMENDASI ================= -->
+
+    <section
+        id="rekomendasi"
+        class="recommendation-section"
+    >
+
+        <div class="section-title">
+
+            <span>RECOMMENDATION</span>
+
+            <h2>
+                Rekomendasi
+            </h2>
+
+            <p id="recommendationDescription">
+                Pilih tanggal pada perkiraan cuaca.
+            </p>
+
+        </div>
+
+
+        <!-- SATU KARTU UTAMA -->
+
+        <div class="recommendation-card">
+
+
+            <!-- Aktivitas -->
+
+            <div class="recommendation-item">
+
+                <div class="recommendation-heading">
+
+                    <i class="bi bi-activity"></i>
+
+                    <h3>
+                        Aktivitas
+                    </h3>
+
+                </div>
+
+                <div
+                    id="activityContainer"
+                    class="recommendation-content"
+                ></div>
+
+            </div>
+
+
+            <!-- Makanan -->
+
+            <div class="recommendation-item">
+
+                <div class="recommendation-heading">
+
+                    <i class="bi bi-cup-hot"></i>
+
+                    <h3>
+                        Makanan & Minuman
+                    </h3>
+
+                </div>
+
+                <div
+                    id="foodContainer"
+                    class="recommendation-content"
+                ></div>
+
+            </div>
+
+
+            <!-- Novel -->
+
+            <div class="recommendation-item">
+
+                <div class="recommendation-heading">
+
+                    <i class="bi bi-book"></i>
+
+                    <h3>
+                        Novel
+                    </h3>
+
+                </div>
+
+                <div
+                    id="novelContainer"
+                    class="recommendation-content"
+                ></div>
+
+            </div>
+
+
+            <!-- Lagu -->
+
+            <div class="recommendation-item">
+
+                <div class="recommendation-heading">
+
+                    <i class="bi bi-music-note"></i>
+
+                    <h3>
+                        Lagu
+                    </h3>
+
+                </div>
+
+                <div
+                    id="musicContainer"
+                    class="recommendation-content"
+                ></div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= JADWAL ================= -->
+
+    <section
+        id="jadwal"
+        class="schedule-section"
+    >
+
+        <div class="section-title">
+
+            <span>SCHOOL SCHEDULE</span>
+
+            <h2>
+                Jadwal Pelajaran
+            </h2>
+
+            <p>
+                Jadwal pelajaran lengkap dengan guru dan ruang.
+            </p>
+
+        </div>
+
+
+        <!-- Tombol Hari -->
+
+        <div class="day-buttons">
+
+            <button
+                class="day-button active"
+                data-day="senin"
+            >
+                Senin
+            </button>
+
+            <button
+                class="day-button"
+                data-day="selasa"
+            >
+                Selasa
+            </button>
+
+            <button
+                class="day-button"
+                data-day="rabu"
+            >
+                Rabu
+            </button>
+
+            <button
+                class="day-button"
+                data-day="kamis"
+            >
+                Kamis
+            </button>
+
+            <button
+                class="day-button"
+                data-day="jumat"
+            >
+                Jumat
+            </button>
+
+        </div>
+
+
+        <!-- Jadwal -->
+
+        <div
+            id="scheduleContainer"
+            class="schedule-container"
+        ></div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            © 2026 Personal Schedule
+        </p>
+
+        <p>
+            Sistem informasi cuaca dan jadwal sekolah
+        </p>
+
+    </footer>
+
+
+    <!-- JS -->
+
+    <script src="js/data.js"></script>
+
+    <script src="js/weather.js"></script>
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
